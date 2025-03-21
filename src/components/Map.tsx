@@ -82,7 +82,7 @@ const Map = () => {
                   <MapPin size={24} className="text-uno-600 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Адрес</h3>
-                    <p className="text-gray-700">г. Киев, ул. Героев Украины, 23А</p>
+                    <p className="text-gray-700">вул. Гната Юри, 20, Киев, парковка Сильпо</p>
                     <a 
                       href="https://maps.app.goo.gl/TcNTq6kpBk4NiPVn8" 
                       target="_blank" 
@@ -112,7 +112,6 @@ const Map = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Контакты</h3>
                     <p className="text-gray-700">+380 93 318 5444</p>
-                    <p className="text-gray-700">info@unocarwash.ua</p>
                   </div>
                 </div>
               </div>
