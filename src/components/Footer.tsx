@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Clock size={20} className="text-uno-400 mr-3 mt-1" />
-                <span className="text-gray-400">Ежедневно: 08:00 - 22:00</span>
+                <span className="text-gray-400">Ежедневно: 09:00 - 19:00</span>
               </li>
             </ul>
           </motion.div>

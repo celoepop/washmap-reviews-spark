@@ -100,7 +100,7 @@ const Map = () => {
                   <Clock size={24} className="text-uno-600 mr-3 mt-1" />
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Часы работы</h3>
-                    <p className="text-gray-700">Ежедневно: 08:00 - 22:00</p>
+                    <p className="text-gray-700">Ежедневно: 09:00 - 19:00</p>
                     <p className="text-gray-700">Без выходных</p>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ const Map = () => {
           >
             <iframe 
               ref={mapRef}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.7639023843126!2d37.62271659234057!3d55.59183571583088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aaf7c3f9cd9a9%3A0x1bb53be2aea7c2bd!2sUNO%20Avto%20Wash!5e0!3m2!1sen!2sus!4v1717782685507!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d534.2907288957294!2d30.382662411801796!3d50.43124009906472!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cbb44dede51f%3A0x84b792231c1c6215!2z0JDQstGC0L7QvNC-0LnQutCwIFVOTw!5e0!3m2!1sru!2sua!4v1742581880347!5m2!1sru!2sua" 
               className="w-full h-[400px] md:h-full border-0"
               allowFullScreen
               loading="lazy"
