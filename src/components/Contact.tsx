@@ -140,7 +140,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-uno-400 focus:border-transparent outline-none transition-all"
-                    placeholder="+7 (___) ___-__-__"
+                    placeholder="+380 (___) ___-__-__"
                   />
                 </div>
                 
@@ -161,10 +161,7 @@ const Contact = () => {
                 
                 <button
                   type="submit"
-                  className={cn(
-                    "w-full bg-uno-600 hover:bg-uno-700 text-white py-4 px-6 rounded-lg font-medium transition-all flex items-center justify-center",
-                    formStatus === 'success' ? 'bg-green-500 hover:bg-green-600' : ''
-                  )}
+                  className="w-full bg-uno-600 hover:bg-uno-700 text-white py-4 px-6 rounded-lg font-medium transition-all flex items-center justify-center"
                 >
                   <Send size={18} className="mr-2" />
                   Отправить сообщение

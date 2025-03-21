@@ -79,15 +79,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="text-uno-400 mr-3 mt-1" />
-                <span className="text-gray-400">г. Москва, Варшавское шоссе, 170Г</span>
+                <span className="text-gray-400">г. Киев, ул. Героев Украины, 23А</span>
               </li>
               <li className="flex items-start">
                 <Phone size={20} className="text-uno-400 mr-3 mt-1" />
-                <span className="text-gray-400">+7 (499) 123-45-67</span>
+                <span className="text-gray-400">+380 93 318 5444</span>
               </li>
               <li className="flex items-start">
                 <Mail size={20} className="text-uno-400 mr-3 mt-1" />
-                <span className="text-gray-400">info@unocarwash.ru</span>
+                <span className="text-gray-400">info@unocarwash.ua</span>
               </li>
               <li className="flex items-start">
                 <Clock size={20} className="text-uno-400 mr-3 mt-1" />
