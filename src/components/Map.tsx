@@ -2,8 +2,13 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Phone } from 'lucide-react';
+import { translations } from '../contexts/LanguageContext';
 
-const Map = () => {
+interface MapProps {
+  language: 'ru' | 'ua';
+}
+
+const Map: React.FC<MapProps> = ({ language }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLIFrameElement>(null);
 
@@ -27,6 +32,13 @@ const Map = () => {
       }
     };
   }, []);
+  
+  const t = (key: string): string => {
+    if (translations[key] && translations[key][language]) {
+      return translations[key][language];
+    }
+    return key;
+  };
 
   return (
     <section
@@ -44,7 +56,7 @@ const Map = () => {
             className="inline-flex items-center justify-center bg-uno-50 text-uno-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
           >
             <MapPin size={16} className="mr-2" />
-            <span>Как нас найти</span>
+            <span>{t('findUs')}</span>
           </motion.div>
           
           <motion.h2
@@ -54,7 +66,7 @@ const Map = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
-            Наше расположение
+            {t('ourLocation')}
           </motion.h2>
           
           <motion.p
@@ -64,7 +76,7 @@ const Map = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto mb-10"
           >
-            Мы находимся в удобном месте с отличной транспортной доступностью
+            {t('locationDescription')}
           </motion.p>
         </div>
 
@@ -81,15 +93,15 @@ const Map = () => {
                 <div className="flex items-start mb-3">
                   <MapPin size={24} className="text-uno-600 mr-3 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Адрес</h3>
-                    <p className="text-gray-700">вул. Гната Юри, 20, Киев, парковка Сильпо</p>
+                    <h3 className="font-semibold text-lg mb-1">{t('address')}</h3>
+                    <p className="text-gray-700">{t('addressText')}</p>
                     <a 
                       href="https://maps.app.goo.gl/TcNTq6kpBk4NiPVn8" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-uno-600 hover:text-uno-700 font-medium mt-2 inline-block"
                     >
-                      Открыть в Google Maps
+                      {t('openInGoogleMaps')}
                     </a>
                   </div>
                 </div>
@@ -99,9 +111,9 @@ const Map = () => {
                 <div className="flex items-start mb-3">
                   <Clock size={24} className="text-uno-600 mr-3 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Часы работы</h3>
-                    <p className="text-gray-700">Ежедневно: 09:00 - 19:00</p>
-                    <p className="text-gray-700">Без выходных</p>
+                    <h3 className="font-semibold text-lg mb-1">{t('workingHours')}</h3>
+                    <p className="text-gray-700">{t('dailyHours')}</p>
+                    <p className="text-gray-700">{t('noWeekends')}</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +122,7 @@ const Map = () => {
                 <div className="flex items-start">
                   <Phone size={24} className="text-uno-600 mr-3 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Контакты</h3>
+                    <h3 className="font-semibold text-lg mb-1">{t('contacts')}</h3>
                     <p className="text-gray-700">+380 93 318 5444</p>
                   </div>
                 </div>
